@@ -1,8 +1,8 @@
-# ateqo-policy
+# policy
 
 Documents légaux publics de l'application **ATEQO** :
 
-- **Politique de confidentialité** : [https://ateqo.fr/ateqo-policy/](https://ateqo.fr/ateqo-policy/)
+- **Politique de confidentialité** : [https://ateqo.fr/policy/](https://ateqo.fr/policy/)
 
 ## Structure du repo
 
@@ -14,11 +14,11 @@ Documents légaux publics de l'application **ATEQO** :
 - `delete-account.html` — procédure de suppression de compte (exigence Google Play)
 
 URLs à fournir aux stores lors de la soumission :
-- **Privacy Policy URL** : https://ateqo.fr/ateqo-policy/
-- **Support URL** : https://ateqo.fr/ateqo-policy/support.html
+- **Privacy Policy URL** : https://ateqo.fr/policy/
+- **Support URL** : https://ateqo.fr/policy/support.html
 
 Les liens internes sont volontairement écrits en chemins absolus depuis la
-racine (`/ateqo-policy/...`), et non en URL complètes : ils restent ainsi
+racine (`/policy/...`), et non en URL complètes : ils restent ainsi
 valides quel que soit le domaine servant le site.
 
 ## Ancien nom du repo
