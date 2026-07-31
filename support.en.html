@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>ATEQO — Support</title>
+<meta name="description" content="Support page for the ATEQO application: FAQ, contact, troubleshooting.">
+<link rel="alternate" hreflang="fr" href="support.html">
+<link rel="alternate" hreflang="en" href="support.en.html">
+<style>
+  :root {
+    /* Palette ATEQO — reprise des tokens de l'app (theme clair).
+       primaire = fond canvas/entete · secondaire = surface des panneaux. */
+    --bg: #f1f4f7;
+    --surface: #ffffff;
+    --surface2: #f6f8fb;
+    --text: #0f1923;
+    --text2: #515151;
+    --text3: #8a929b;
+    --accent: #2563eb;
+    --border: #e3e7ec;
+    --green: #16a34a;
+    --yellow: #b45309;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+    /* Degrade de l'entete de l'app (blanc -> bleu-gris tres clair). */
+    background: linear-gradient(160deg, #ffffff, #eef2f7) no-repeat fixed;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    padding: 32px 16px 64px;
+    min-height: 100vh;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(15,25,35,.06);
+    padding: 40px 36px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .logo {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .logo span:nth-child(1) { color: #3b82f6; }
+  .logo span:nth-child(2) { color: #0d9488; }
+  .logo span:nth-child(3) { color: #d97706; }
+  .logo span:nth-child(4) { color: #db2777; }
+  .logo span:nth-child(5) { color: #7c3aed; }
+  .lang-switch {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+  }
+  .lang-switch a {
+    padding: 3px 11px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text2);
+  }
+  .lang-switch a.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .lang-switch a.active:hover { text-decoration: none; }
+  .version {
+    color: var(--text2);
+    font-size: 0.86rem;
+    margin-bottom: 28px;
+  }
+  h2 {
+    font-size: 1.18rem;
+    margin: 32px 0 12px;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+  }
+  details {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding: 0;
+    overflow: hidden;
+  }
+  details[open] {
+    background: rgba(15,25,35,0.04);
+  }
+  summary {
+    padding: 14px 18px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text);
+    font-size: 0.95rem;
+    list-style: none;
+    position: relative;
+    transition: background 0.15s;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+';
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: var(--accent);
+    font-weight: 400;
+    transition: transform 0.15s;
+  }
+  details[open] summary::after {
+    content: '−';
+  }
+  summary:hover { background: rgba(15,25,35,0.05); }
+  details > div.answer {
+    padding: 0 18px 16px;
+    color: var(--text);
+    font-size: 0.92rem;
+  }
+  details > div.answer p { margin-bottom: 10px; }
+  details > div.answer p:last-child { margin-bottom: 0; }
+  p, ul, ol {
+    margin-bottom: 14px;
+    color: var(--text);
+    font-size: 0.95rem;
+  }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+  strong { color: var(--text); font-weight: 600; }
+  code {
+    background: #fdf3e3;
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'SF Mono', Menlo, monospace;
+    font-size: 0.86em;
+    color: var(--yellow);
+  }
+  .contact-card {
+    background: rgba(34,197,94,0.06);
+    border: 1px solid rgba(34,197,94,0.3);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 18px 0 24px;
+  }
+  .contact-card h3 {
+    color: var(--green);
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+  .contact-card a {
+    font-size: 1.05rem;
+    color: var(--green);
+    font-weight: 600;
+  }
+  footer {
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: var(--text2);
+    font-size: 0.82rem;
+    text-align: center;
+  }
+  .footer-links {
+    margin-top: 8px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<div class="lang-switch">
+  <a href="support.html" data-lang="fr">FR</a>
+  <a href="support.en.html" class="active" data-lang="en">EN</a>
+</div>
+
+<a href="/" style="text-decoration:none;"><div class="logo"><span>A</span><span>T</span><span>E</span><span>Q</span><span>O</span></div></a>
+
+<h1>Support</h1>
+<p class="version">Help, troubleshooting and contact for the ATEQO application.</p>
+
+<div class="contact-card">
+  <h3>📧 Direct contact</h3>
+  <p>For any question, bug report or specific request:</p>
+  <p><a href="mailto:cargo.app.admin@gmail.com">cargo.app.admin@gmail.com</a></p>
+  <p style="font-size:0.85rem;color:var(--text2);margin-top:8px;">Average response time: 24-48 business hours.</p>
+</div>
+
+<h2>Frequently asked questions</h2>
+
+<details>
+  <summary>How do I add my first address?</summary>
+  <div class="answer">
+    <p><strong>1.</strong> On the home screen, tap the <strong>ellipsis (•••)</strong> under the ATEQO logo at the top to open the panel, and set your starting point (your depot or your home): type the address, pick a Google suggestion, confirm.</p>
+    <p><strong>2.</strong> In the add bar, type a delivery address, dictate it by voice, or tap the scanner icon to photograph a parcel label. The app detects the address automatically.</p>
+    <p><strong>3.</strong> On the map, tap the grey marker of the new stop to assign it a sector (1 to 5) and confirm.</p>
+  </div>
+</details>
+
+<details>
+  <summary>The app says "No route calculated". What should I do?</summary>
+  <div class="answer">
+    <p>Two conditions are required to run the optimization:</p>
+    <ul>
+      <li>Having set a <strong>starting point</strong> in the Base tab</li>
+      <li>Having <strong>at least one confirmed address</strong> (with a sector assigned, not a grey marker)</li>
+    </ul>
+    <p>Once both conditions are met, the "Optimize route" button becomes active. You can launch it from the "My route" tab or directly from the "Route" tab.</p>
+  </div>
+</details>
+
+<details>
+  <summary>The label scan does not detect the address correctly</summary>
+  <div class="answer">
+    <p>OCR works best when:</p>
+    <ul>
+      <li>The label is <strong>sharp and well lit</strong></li>
+      <li>You frame only the address area (not the whole parcel)</li>
+      <li>The text is readable to the eye (not creased, not too small)</li>
+    </ul>
+    <p>If the detection gets it wrong, you can manually correct the number and the street in the scan dialog before confirming. The postcode is remembered between scans to make entry easier.</p>
+    <p>If the app displays "OCR service not configured": this is a server-side problem, contact support.</p>
+  </div>
+</details>
+
+<details>
+  <summary>GPS location is not working</summary>
+  <div class="answer">
+    <p>First check that permission is granted: Settings → Apps → ATEQO → Permissions → Location → enable "While using the app".</p>
+    <p>ATEQO only tracks your position <strong>during active navigation</strong>. It never uses your position in the background.</p>
+    <p>If you switch to external Google Maps during navigation, the position may be suspended by the system after around 30 seconds. This is normal — coming back to ATEQO reactivates tracking.</p>
+  </div>
+</details>
+
+<details>
+  <summary>I forgot my password</summary>
+  <div class="answer">
+    <p>On the sign-in screen (Account tab):</p>
+    <ol>
+      <li>Click <strong>"Forgot password?"</strong> below the form</li>
+      <li>Enter your email address</li>
+      <li>You will receive an email with a reset link</li>
+      <li>Click the link and choose a new password</li>
+    </ol>
+    <p>If you do not receive the email, check your spam folder. The sender is <code>noreply@mail.app.supabase.io</code>.</p>
+  </div>
+</details>
+
+<details>
+  <summary>I am Premium but my free-tier limits are still there</summary>
+  <div class="answer">
+    <p>Premium status is synchronized when the app opens and right after a purchase. If the app has not recognized your subscription:</p>
+    <ol>
+      <li>Sign out then sign back in → forces a re-check</li>
+      <li>Close and fully reopen the app</li>
+      <li>If the problem persists after your purchase, contact support with your account email</li>
+    </ol>
+    <p>You can also check your subscription status by clicking <strong>"Manage my subscription"</strong> in the Account tab — this opens the Google Play Subscriptions page with your billing history.</p>
+  </div>
+</details>
+
+<details>
+  <summary>How do I cancel my Premium subscription?</summary>
+  <div class="answer">
+    <p>Everything goes through Google Play, reachable from the app:</p>
+    <ol>
+      <li><strong>Account</strong> tab → click <strong>"Manage subscription"</strong></li>
+      <li>You are redirected to the Google Play Subscriptions page</li>
+      <li>Select ATEQO then click <strong>"Cancel subscription"</strong></li>
+      <li>Confirm</li>
+    </ol>
+    <p>Cancellation takes effect at the end of the period paid for (you keep Premium until that date). No penalty, no commitment.</p>
+  </div>
+</details>
+
+<details>
+  <summary>How do I delete my account and all my data?</summary>
+  <div class="answer">
+    <p>Send an email to <a href="mailto:cargo.app.admin@gmail.com">cargo.app.admin@gmail.com</a> from the address linked to your ATEQO account, with the subject <strong>"Account deletion"</strong>.</p>
+    <p>In accordance with the GDPR (Article 17, right to erasure), we will carry out the deletion within one month:</p>
+    <ul>
+      <li>Account data (email, username, Supabase identifier)</li>
+      <li>Deletion of your subscription data (RevenueCat)</li>
+      <li>A Google Play subscription that is still active must be cancelled by you through Google Play (Account → Subscriptions) — Google handles payments</li>
+    </ul>
+    <p>Data stored locally on your device (routes, history) is erased automatically when the app is uninstalled.</p>
+    <p>More details about your rights in the <a href="/policy/index.en.html">privacy policy</a>.</p>
+  </div>
+</details>
+
+<details>
+  <summary>What are the differences between Free and Premium?</summary>
+  <div class="answer">
+    <p><strong>On sign-up:</strong> your first 7 routes come with no limit at all, with no payment method to enter.</p>
+    <p><strong>Free plan (afterwards):</strong></p>
+    <ul>
+      <li>15 addresses maximum per route</li>
+      <li>3 active sectors (S1, S2, S3)</li>
+      <li>Unlimited optimizations</li>
+      <li>All other features (scan, GPS navigation, loading checklist, proximity alerts) are included</li>
+    </ul>
+    <p><strong>Premium:</strong></p>
+    <ul>
+      <li>Unlimited addresses</li>
+      <li>5 sectors (S1 to S5)</li>
+      <li>Address book (saved recurring addresses)</li>
+    </ul>
+    <p>The app shows no advertising, on any plan.</p>
+  </div>
+</details>
+
+<details>
+  <summary>Does the app work offline?</summary>
+  <div class="answer">
+    <p>Partly. Here is what works <strong>without internet</strong>:</p>
+    <ul>
+      <li>The app and its interface</li>
+      <li>Viewing the addresses you have already entered</li>
+      <li>GPS (your phone's sensor)</li>
+      <li>History of saved routes</li>
+    </ul>
+    <p>What <strong>requires internet</strong>:</p>
+    <ul>
+      <li>Google Maps maps (loading the tiles)</li>
+      <li>Google address suggestions and geocoding</li>
+      <li>Route optimization (uses the Google Routes API)</li>
+      <li>Sign-in / Premium subscription verification</li>
+      <li>Label OCR scan (Google Cloud Vision)</li>
+    </ul>
+    <p>During a route, if you enter an area with no 4G/5G, navigation that has already been calculated keeps working (local GPS does not need internet to operate).</p>
+  </div>
+</details>
+
+<details>
+  <summary>Which Android versions does the app support? And iOS?</summary>
+  <div class="answer">
+    <p>ATEQO is currently available <strong>on Android only</strong>, through Google Play. <strong>Android</strong>: 7.0 minimum (Nougat, released in 2016).</p>
+    <p>On very old models, some features may be slower (in particular the parcel label OCR, which needs a recent camera). GPS navigation and route optimization work everywhere.</p>
+    <p>An <strong>iOS</strong> version is being considered but is not available yet.</p>
+  </div>
+</details>
+
+<h2>Report a bug</h2>
+<p>If you run into unexpected behaviour:</p>
+<ol>
+  <li>Note <strong>the app version</strong> (shown in Account → About)</li>
+  <li>Note <strong>your phone model</strong> and OS version</li>
+  <li>Describe what happened and what you expected instead</li>
+  <li>Send it all to <a href="mailto:cargo.app.admin@gmail.com">cargo.app.admin@gmail.com</a></li>
+</ol>
+<p>A screenshot or a video is very welcome if you have one.</p>
+
+<h2>Suggestions and improvements</h2>
+<p>ATEQO is built by a courier, for couriers. Any feedback from the field is valuable — including small ideas ("it would be good if...").</p>
+<p>Send your suggestions to <a href="mailto:cargo.app.admin@gmail.com">cargo.app.admin@gmail.com</a> with "<strong>Suggestion</strong>" in the subject line.</p>
+
+<footer>
+  ATEQO — Mobile application for professional couriers.
+  <div class="footer-links">
+    <a href="/">← Back to ATEQO</a>
+    <a href="/policy/index.en.html">Privacy Policy</a>
+    <a href="mailto:cargo.app.admin@gmail.com">Contact</a>
+  </div>
+</footer>
+
+</main>
+
+<script>
+  /* Le selecteur de langue des pages annexes ecrit la meme cle que l'accueil
+     (cf. index.html), pour que la navigation reste dans une seule langue. */
+  document.querySelectorAll('.lang-switch a[data-lang]').forEach(function (languageLink) {
+    languageLink.addEventListener('click', function () {
+      try { localStorage.setItem('ateqo_site_lang', languageLink.getAttribute('data-lang')); }
+      catch (e) { /* stockage indisponible */ }
+    });
+  });
+</script>
+
+</body>
+</html>

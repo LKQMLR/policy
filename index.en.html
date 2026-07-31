@@ -149,8 +149,8 @@
 <main>
 
 <div class="lang-switch">
-  <a href="index.html">FR</a>
-  <a href="index.en.html" class="active">EN</a>
+  <a href="index.html" data-lang="fr">FR</a>
+  <a href="index.en.html" class="active" data-lang="en">EN</a>
 </div>
 
 <a href="/" style="text-decoration:none;"><div class="logo"><span>A</span><span>T</span><span>E</span><span>Q</span><span>O</span></div></a>
@@ -313,11 +313,23 @@
   Document drafted in accordance with the GDPR (Regulation (EU) 2016/679), the French Data Protection Act (1978, as amended) and the requirements of the Apple App Store and Google Play stores.
   <div style="margin-top:12px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
     <a href="/" style="color:var(--accent);">← Back to ATEQO</a>
-    <a href="/policy/support.html" style="color:var(--accent);">Support</a>
+    <a href="/policy/support.en.html" style="color:var(--accent);">Support</a>
     <a href="mailto:cargo.app.admin@gmail.com" style="color:var(--accent);">Contact</a>
   </div>
 </footer>
 
 </main>
+
+<script>
+  /* Le selecteur de langue des pages annexes ecrit la meme cle que l'accueil
+     (cf. index.html), pour que la navigation reste dans une seule langue. */
+  document.querySelectorAll('.lang-switch a[data-lang]').forEach(function (languageLink) {
+    languageLink.addEventListener('click', function () {
+      try { localStorage.setItem('ateqo_site_lang', languageLink.getAttribute('data-lang')); }
+      catch (e) { /* stockage indisponible */ }
+    });
+  });
+</script>
+
 </body>
 </html>

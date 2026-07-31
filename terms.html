@@ -6,6 +6,8 @@
 <meta name="robots" content="index, follow">
 <title>ATEQO — Conditions d'utilisation</title>
 <meta name="description" content="Conditions générales d'utilisation de l'application ATEQO.">
+<link rel="alternate" hreflang="fr" href="terms.html">
+<link rel="alternate" hreflang="en" href="terms.en.html">
 <style>
   :root {
     /* Palette ATEQO — reprise des tokens de l'app (theme clair).
@@ -58,6 +60,25 @@
   .logo span:nth-child(3) { color: #d97706; }
   .logo span:nth-child(4) { color: #db2777; }
   .logo span:nth-child(5) { color: #7c3aed; }
+  .lang-switch {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+  }
+  .lang-switch a {
+    padding: 3px 11px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text2);
+  }
+  .lang-switch a.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .lang-switch a.active:hover { text-decoration: none; }
   .version {
     color: var(--text2);
     font-size: 0.86rem;
@@ -106,6 +127,11 @@
 </head>
 <body>
 <main>
+
+<div class="lang-switch">
+  <a href="terms.html" class="active" data-lang="fr">FR</a>
+  <a href="terms.en.html" data-lang="en">EN</a>
+</div>
 
 <a href="/" style="text-decoration:none;"><div class="logo"><span>A</span><span>T</span><span>E</span><span>Q</span><span>O</span></div></a>
 
@@ -162,5 +188,17 @@
 </footer>
 
 </main>
+
+<script>
+  /* Le selecteur de langue des pages annexes ecrit la meme cle que l'accueil
+     (cf. index.html), pour que la navigation reste dans une seule langue. */
+  document.querySelectorAll('.lang-switch a[data-lang]').forEach(function (languageLink) {
+    languageLink.addEventListener('click', function () {
+      try { localStorage.setItem('ateqo_site_lang', languageLink.getAttribute('data-lang')); }
+      catch (e) { /* stockage indisponible */ }
+    });
+  });
+</script>
+
 </body>
 </html>
