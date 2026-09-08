@@ -220,7 +220,7 @@
   <summary>Comment ajouter ma première adresse ?</summary>
   <div class="answer">
     <p><strong>1.</strong> Sur l'écran d'accueil, touche l'<strong>ellipsis (•••)</strong> sous le logo ATEQO en haut pour déployer le panneau, et définis ton point de départ (ton dépôt ou ton domicile) : tape l'adresse, sélectionne une suggestion Google, valide.</p>
-    <p><strong>2.</strong> Dans la barre d'ajout, tape une adresse de livraison, dicte-la à la voix, ou touche l'icône scanner pour photographier une étiquette de colis. L'app détecte l'adresse automatiquement.</p>
+    <p><strong>2.</strong> Dans la barre d'ajout, tape une adresse de livraison, ou touche l'icône micro pour la dicter. Dans les deux cas, choisis ensuite la bonne suggestion Google.</p>
     <p><strong>3.</strong> Sur la carte, touche le marqueur gris du nouvel arrêt pour lui attribuer un secteur (1 à 5) et valider.</p>
   </div>
 </details>
@@ -238,16 +238,17 @@
 </details>
 
 <details>
-  <summary>Le scan d'étiquette ne détecte pas l'adresse correctement</summary>
+  <summary>La dictée vocale ne reconnaît pas mon adresse</summary>
   <div class="answer">
-    <p>L'OCR fonctionne mieux quand :</p>
+    <p>Vérifie d'abord l'autorisation : Paramètres → Apps → ATEQO → Autorisations → Micro.</p>
+    <p>La dictée ne valide jamais une adresse toute seule : le texte reconnu remplit la barre d'ajout, les suggestions Google apparaissent dessous, et c'est toi qui touches la bonne. Si le texte reconnu est approximatif, corrige-le au clavier avant de choisir une suggestion — la correction porte souvent sur un seul mot.</p>
+    <p>Elle fonctionne mieux quand :</p>
     <ul>
-      <li>L'étiquette est <strong>nette et bien éclairée</strong></li>
-      <li>Tu cadres uniquement la zone d'adresse (pas tout le colis)</li>
-      <li>Le texte est lisible à l'œil (pas froissé, pas trop petit)</li>
+      <li>Tu dictes <strong>le numéro, puis la rue, puis la ville</strong>, d'une traite</li>
+      <li>Le moteur vocal de ton téléphone est installé dans <strong>la langue que tu parles</strong></li>
+      <li>Tu n'es pas dans un environnement très bruyant (moteur, radio, quai de tri)</li>
     </ul>
-    <p>Si la détection se trompe, tu peux corriger manuellement le numéro et la rue dans la modale de scan avant de valider. Le code postal est mémorisé entre les scans pour faciliter la saisie.</p>
-    <p>Si l'app affiche « Service OCR non configuré » : c'est un problème côté serveur, contacte le support.</p>
+    <p>La reconnaissance vocale est celle de ton appareil : sur certains modèles, elle a besoin d'internet pour fonctionner. En zone blanche, la saisie au clavier prend le relais.</p>
   </div>
 </details>
 
@@ -325,7 +326,7 @@
       <li>5 tournées optimisées par mois</li>
       <li>Adresses illimitées par tournée</li>
       <li>3 secteurs actifs (S1, S2, S3)</li>
-      <li>Toutes les autres fonctionnalités (scan, navigation GPS, check-list de chargement, alertes de proximité) sont incluses</li>
+      <li>Toutes les autres fonctionnalités (dictée vocale, navigation GPS, check-list de chargement, alertes de proximité) sont incluses</li>
     </ul>
     <p><strong>Premium :</strong></p>
     <ul>
@@ -354,7 +355,6 @@
       <li>Suggestions d'adresses Google + géocodage</li>
       <li>Optimisation de tournée (utilise Google Routes API)</li>
       <li>Connexion / vérification de l'abonnement Premium</li>
-      <li>Scan OCR d'étiquette (Google Cloud Vision)</li>
     </ul>
     <p>Pendant une tournée, si tu passes dans une zone sans 4G/5G, la navigation déjà calculée continue de marcher (le GPS local n'a pas besoin d'internet pour fonctionner).</p>
   </div>
@@ -364,7 +364,7 @@
   <summary>Sur quelles versions d'Android l'app fonctionne-t-elle ? Et iOS ?</summary>
   <div class="answer">
     <p>ATEQO est actuellement disponible <strong>sur Android uniquement</strong>, via Google Play. <strong>Android</strong> : 7.0 minimum (Nougat, sortie 2016).</p>
-    <p>Sur des modèles très anciens, certaines fonctionnalités peuvent être plus lentes (notamment l'OCR de scan colis qui demande un appareil photo récent). La navigation GPS et l'optimisation de tournée fonctionnent partout.</p>
+    <p>Sur des modèles très anciens, certaines fonctionnalités peuvent être plus lentes, et la dictée vocale dépend du moteur de reconnaissance installé sur l'appareil. La navigation GPS et l'optimisation de tournée fonctionnent partout.</p>
     <p>Une version <strong>iOS</strong> est envisagée mais n'est pas encore disponible.</p>
   </div>
 </details>

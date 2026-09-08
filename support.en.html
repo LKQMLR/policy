@@ -220,7 +220,7 @@
   <summary>How do I add my first address?</summary>
   <div class="answer">
     <p><strong>1.</strong> On the home screen, tap the <strong>ellipsis (•••)</strong> under the ATEQO logo at the top to open the panel, and set your starting point (your depot or your home): type the address, pick a Google suggestion, confirm.</p>
-    <p><strong>2.</strong> In the add bar, type a delivery address, dictate it by voice, or tap the scanner icon to photograph a parcel label. The app detects the address automatically.</p>
+    <p><strong>2.</strong> In the add bar, type a delivery address, or tap the microphone icon to dictate it. Either way, then pick the right Google suggestion.</p>
     <p><strong>3.</strong> On the map, tap the grey marker of the new stop to assign it a sector (1 to 5) and confirm.</p>
   </div>
 </details>
@@ -238,16 +238,17 @@
 </details>
 
 <details>
-  <summary>The label scan does not detect the address correctly</summary>
+  <summary>Voice dictation does not recognise my address</summary>
   <div class="answer">
-    <p>OCR works best when:</p>
+    <p>First check the permission: Settings → Apps → ATEQO → Permissions → Microphone.</p>
+    <p>Dictation never confirms an address on its own: the recognised text fills the add bar, Google suggestions appear below it, and you tap the right one. If the recognised text is off, correct it with the keyboard before picking a suggestion — it is usually a single word.</p>
+    <p>It works best when:</p>
     <ul>
-      <li>The label is <strong>sharp and well lit</strong></li>
-      <li>You frame only the address area (not the whole parcel)</li>
-      <li>The text is readable to the eye (not creased, not too small)</li>
+      <li>You dictate <strong>the number, then the street, then the town</strong>, in one go</li>
+      <li>Your phone's speech engine is installed in <strong>the language you speak</strong></li>
+      <li>You are not in a very noisy place (engine, radio, sorting bay)</li>
     </ul>
-    <p>If the detection gets it wrong, you can manually correct the number and the street in the scan dialog before confirming. The postcode is remembered between scans to make entry easier.</p>
-    <p>If the app displays "OCR service not configured": this is a server-side problem, contact support.</p>
+    <p>Speech recognition is your device's own: on some models it needs an internet connection. Where there is no signal, keyboard entry takes over.</p>
   </div>
 </details>
 
@@ -325,7 +326,7 @@
       <li>5 optimized routes per month</li>
       <li>Unlimited addresses per route</li>
       <li>3 active sectors (S1, S2, S3)</li>
-      <li>All other features (scan, GPS navigation, loading checklist, proximity alerts) are included</li>
+      <li>All other features (voice dictation, GPS navigation, loading checklist, proximity alerts) are included</li>
     </ul>
     <p><strong>Premium:</strong></p>
     <ul>
@@ -354,7 +355,6 @@
       <li>Google address suggestions and geocoding</li>
       <li>Route optimization (uses the Google Routes API)</li>
       <li>Sign-in / Premium subscription verification</li>
-      <li>Label OCR scan (Google Cloud Vision)</li>
     </ul>
     <p>During a route, if you enter an area with no 4G/5G, navigation that has already been calculated keeps working (local GPS does not need internet to operate).</p>
   </div>
@@ -364,7 +364,7 @@
   <summary>Which Android versions does the app support? And iOS?</summary>
   <div class="answer">
     <p>ATEQO is currently available <strong>on Android only</strong>, through Google Play. <strong>Android</strong>: 7.0 minimum (Nougat, released in 2016).</p>
-    <p>On very old models, some features may be slower (in particular the parcel label OCR, which needs a recent camera). GPS navigation and route optimization work everywhere.</p>
+    <p>On very old models, some features may be slower, and voice dictation depends on the speech engine installed on the device. GPS navigation and route optimization work everywhere.</p>
     <p>An <strong>iOS</strong> version is being considered but is not available yet.</p>
   </div>
 </details>
