@@ -157,7 +157,7 @@
 <a href="/" style="text-decoration:none;"><div class="logo"><span>A</span><span>T</span><span>E</span><span>Q</span><span>O</span></div></a>
 
 <h1>Politique de confidentialité</h1>
-<p class="version"><strong>Version 1.2</strong> — En vigueur depuis le 5 juillet 2026.</p>
+<p class="version"><strong>Version 1.5</strong> — En vigueur depuis le 8 septembre 2026.</p>
 
 <h2>1. Introduction</h2>
 <p>La présente politique de confidentialité décrit comment l'application mobile <strong>ATEQO</strong> (« l'Application ») collecte, utilise et protège les données personnelles de ses utilisateurs (« vous »). Elle est rédigée conformément au Règlement (UE) 2016/679 relatif à la protection des données personnelles (« RGPD ») et à la loi française Informatique et Libertés du 6 janvier 1978 modifiée.</p>
@@ -180,6 +180,7 @@
     <tr><td>Mot de passe</td><td>Authentification (stocké sous forme hachée, jamais en clair)</td><td>Exécution du contrat</td></tr>
     <tr><td>Pseudonyme (optionnel)</td><td>Affichage dans votre profil</td><td>Consentement (Article 6.1.a)</td></tr>
     <tr><td>Connexion via un compte Google (optionnel, alternative à l'email)</td><td>Votre nom et votre adresse email Google nous sont transmis pour créer votre compte et générer un pseudonyme initial (modifiable ensuite)</td><td>Exécution du contrat (Article 6.1.b RGPD)</td></tr>
+    <tr><td>Étapes d'utilisation de l'application (facultatif, cf. point 3.5)</td><td>Améliorer l'application et mesurer l'efficacité de nos campagnes publicitaires</td><td>Consentement (Article 6.1.a) — refusé par défaut, révocable à tout moment</td></tr>
     <tr><td>Adresses de livraison saisies</td><td>Organisation et optimisation de votre tournée</td><td>Exécution du contrat</td></tr>
     <tr><td>Notes associées à un arrêt (optionnel)</td><td>Aide-mémoire pour vos livraisons</td><td>Exécution du contrat</td></tr>
     <tr><td>Adresse du point de départ (« base »)</td><td>Calcul d'itinéraire depuis votre dépôt ou domicile</td><td>Exécution du contrat</td></tr>
@@ -200,7 +201,7 @@
 <table>
   <thead><tr><th>Donnée</th><th>Traitement</th></tr></thead>
   <tbody>
-    <tr><td>Image d'étiquette colis</td><td>Capturée par la caméra quand vous lancez le scan. Transmise à un service tiers (Google Cloud Vision) pour reconnaissance optique de l'adresse. <strong>L'image n'est jamais stockée sur nos serveurs</strong> : elle est transmise, traitée, et le résultat textuel vous est renvoyé. La requête est instantanée.</td></tr>
+    <tr><td>Dictée vocale d'une adresse</td><td>Quand vous touchez le micro de la barre d'ajout, votre voix est traitée par le moteur de reconnaissance vocale de votre appareil. <strong>Aucun enregistrement n'est conservé ni transmis à nos serveurs</strong> : ATEQO ne reçoit que le texte reconnu, que vous validez avant qu'il rejoigne votre tournée. Le micro ne s'active que le temps de la dictée.</td></tr>
   </tbody>
 </table>
 
@@ -213,12 +214,19 @@
   <li>Vos contacts, votre calendrier, vos photos personnelles</li>
   <li>Vos données de santé ou de fitness</li>
   <li>Aucune donnée sensible (origine raciale, opinions politiques, religion, etc.)</li>
-  <li>Aucune donnée publicitaire ni de tracking <strong>dans l'application</strong> (pas de Google Analytics, Firebase, Sentry, ni équivalent)</li>
+  <li>Votre identifiant publicitaire Android&nbsp;: ATEQO ne le lit jamais et ne demande pas la permission correspondante</li>
+  <li>Aucun profilage, aucune publicité affichée dans l'application, aucune revente de données</li>
 </ul>
+
+<h3>3.5 Mesure d'audience et de performance publicitaire</h3>
+<p>Depuis la version 0.9.3, l'application peut mesurer les grandes étapes de votre utilisation à l'aide de <strong>Google Analytics for Firebase</strong>. Cette mesure poursuit deux finalités&nbsp;: améliorer l'application, et savoir quelles campagnes publicitaires amènent des utilisateurs qui s'en servent réellement.</p>
+<p><strong>Cette mesure est facultative et repose sur votre consentement.</strong> Elle vous est proposée lors de la création de votre compte, par une case décochée par défaut, et reste modifiable à tout moment depuis l'onglet «&nbsp;Mon compte&nbsp;». Tant que vous n'avez pas consenti, aucun identifiant n'est transmis&nbsp;: le refus est la valeur par défaut, y compris au tout premier démarrage de l'application.</p>
+<p>Ce qui est transmis se limite au nom des étapes franchies et à leurs compteurs&nbsp;: ouverture de l'application, ajout d'une première adresse, démarrage et fin d'une tournée, nombre d'arrêts, affichage de l'écran d'abonnement. S'y ajoutent un identifiant d'installation et, si vous y avez consenti, un identifiant de compte transmis sous forme hachée.</p>
+<p><strong>Aucune adresse, aucune coordonnée GPS, aucun nom de destinataire et aucun contenu de tournée n'est transmis à ce titre.</strong> Les adresses que vous saisissez ne quittent jamais votre appareil par ce canal.</p>
 <p>Le site ateqo.fr, distinct de l'application, mesure sa fréquentation à l'aide de Google Analytics. Cette mesure n'est activée qu'après votre consentement explicite et se retire à tout moment&nbsp;; elle est décrite dans les <a href="/mentions-legales/">mentions légales</a>.</p>
 
 <h2>4. Destinataires de vos données</h2>
-<p>ATEQO s'appuie sur les sous-traitants techniques suivants. Aucun de ces tiers n'utilise vos données à des fins de publicité ciblée ou de revente.</p>
+<p>ATEQO s'appuie sur les sous-traitants techniques suivants. Aucun de ces tiers ne revend vos données. Seule la mesure décrite au point 3.5, soumise à votre consentement, poursuit une finalité publicitaire — et elle se limite à évaluer nos propres campagnes, sans jamais vous adresser de publicité.</p>
 <table>
   <thead><tr><th>Sous-traitant</th><th>Service rendu</th><th>Données transmises</th></tr></thead>
   <tbody>
@@ -226,20 +234,22 @@
     <tr><td><strong>Google LLC — Google Sign-In</strong> (États-Unis)</td><td>Authentification alternative à l'email</td><td>Nom et adresse email de votre compte Google, uniquement si vous choisissez cette méthode de connexion</td></tr>
     <tr><td><strong>Google LLC — Google Play Billing</strong> (États-Unis)</td><td>Traitement des paiements et des abonnements premium</td><td>Le paiement est géré par votre compte Google Play — ATEQO ne reçoit aucune donnée bancaire</td></tr>
     <tr><td><strong>RevenueCat, Inc.</strong> (États-Unis)</td><td>Gestion technique des abonnements (validation des achats, statut premium)</td><td>Identifiant de compte (anonyme) et statut d'abonnement — aucune donnée bancaire</td></tr>
-    <tr><td><strong>Google LLC — Cloud Vision API</strong> (États-Unis)</td><td>Reconnaissance optique d'adresses sur étiquettes</td><td>Image colis transmise de manière éphémère lors du scan</td></tr>
     <tr><td><strong>Google LLC — Maps Platform</strong> (États-Unis)</td><td>Cartographie, géocodage, suggestions d'adresses</td><td>Adresses saisies, sessions de recherche</td></tr>
     <tr><td><strong>Vercel Inc.</strong> (États-Unis)</td><td>Hébergement du backend API</td><td>Adresse IP, headers HTTP, jetons d'authentification (validés puis non stockés)</td></tr>
+    <tr><td><strong>Resend (Plus Five Five, Inc.)</strong> (traitement en Irlande)</td><td>Acheminement des e-mails d'authentification : confirmation d'inscription et réinitialisation de mot de passe</td><td>Votre adresse email et le contenu de ces messages</td></tr>
+    <tr><td><strong>Google LLC — Analytics for Firebase</strong> (États-Unis)</td><td>Mesure d'audience et de performance de nos campagnes publicitaires — <strong>uniquement si vous y avez consenti</strong> (cf. point 3.5)</td><td>Nom des étapes franchies et leurs compteurs, identifiant d'installation, identifiant de compte haché. Aucune adresse ni position.</td></tr>
   </tbody>
 </table>
-<p>Aucun partage de vos données avec des tiers à des fins commerciales, publicitaires ou statistiques externes n'est effectué.</p>
+<p>Vos données ne sont jamais vendues, ni transmises à des courtiers en données, ni utilisées pour vous adresser de la publicité. Le seul partage à finalité publicitaire est celui décrit au point 3.5&nbsp;: il sert à mesurer l'efficacité de nos propres campagnes, il est facultatif, et vous pouvez le retirer à tout moment.</p>
 
 <h2>5. Transferts hors de l'Union européenne</h2>
-<p>Les sous-traitants listés ci-dessus sont basés aux États-Unis. Les transferts de données vers ces destinataires sont encadrés par :</p>
+<p>À l'exception de Resend, les sous-traitants listés ci-dessus sont basés aux États-Unis. Les transferts de données vers ces destinataires sont encadrés par :</p>
 <ul>
   <li>les <strong>clauses contractuelles types</strong> adoptées par la Commission européenne (décision 2021/914 du 4 juin 2021) ;</li>
   <li>pour les fournisseurs y adhérant : le <strong>EU-US Data Privacy Framework</strong>, jugé adéquat par la Commission européenne par décision du 10 juillet 2023.</li>
 </ul>
 <p>Ces mécanismes assurent un niveau de protection des données équivalent à celui exigé par le RGPD.</p>
+<p>L'acheminement de nos e-mails d'authentification s'effectue depuis l'<strong>Union européenne</strong> (région Irlande), sans transfert hors UE pour ce traitement. La société Resend étant établie aux États-Unis, les clauses contractuelles types s'appliquent néanmoins à la relation contractuelle.</p>
 
 <h2>6. Durée de conservation des données</h2>
 <table>
@@ -248,7 +258,6 @@
     <tr><td>Compte utilisateur (email, mot de passe haché, pseudonyme, langue, pays, dates de connexion)</td><td>Tant que votre compte existe. Suppression possible <strong>directement dans l'application</strong> (onglet Compte → Gestion du compte → Supprimer le compte), sur demande par email, ou après 3 ans d'inactivité totale.</td></tr>
     <tr><td>Adresses, arrêts, historique de tournées</td><td>Stockés localement sur votre appareil uniquement. Effacés à la désinstallation de l'Application.</td></tr>
     <tr><td>Position GPS</td><td>Conservée en mémoire vive uniquement le temps de la navigation active. Perdue à la fin de la session.</td></tr>
-    <tr><td>Image étiquette colis</td><td>Éphémère — non stockée par ATEQO. Politique de rétention Google Cloud Vision : 24 heures maximum côté Google.</td></tr>
     <tr><td>Logs serveur (IP, headers)</td><td>30 jours maximum côté Vercel, conformément à leur politique d'hébergement standard.</td></tr>
     <tr><td>Statut d'abonnement (via Google Play / RevenueCat)</td><td>Tant que l'abonnement est actif + durée légale comptable (10 ans pour les transactions financières).</td></tr>
   </tbody>
@@ -278,10 +287,10 @@
   <li>la liste de vos arrêts en cours</li>
   <li>votre point de départ favori</li>
   <li>l'historique de vos tournées</li>
-  <li>vos préférences d'affichage (compteur du tutoriel, dernier code postal de scan)</li>
+  <li>vos préférences d'affichage (compteur du tutoriel, langue, thème)</li>
 </ul>
 <p>Ces données restent <strong>exclusivement sur votre appareil</strong>. Elles ne sont jamais transmises à un serveur. La désinstallation de l'Application les efface définitivement.</p>
-<p>ATEQO n'utilise <strong>aucun cookie publicitaire</strong> ni traceur tiers.</p>
+<p>ATEQO n'utilise <strong>aucun cookie publicitaire</strong> et ne vous adresse aucune publicité. Le seul identifiant transmis à un tiers est celui de la mesure décrite au point 3.5, soumise à votre consentement et révocable à tout moment.</p>
 
 <h2>9. Sécurité</h2>
 <p>Les mesures suivantes protègent vos données :</p>
