@@ -157,7 +157,7 @@
 <a href="/" style="text-decoration:none;"><div class="logo"><span>A</span><span>T</span><span>E</span><span>Q</span><span>O</span></div></a>
 
 <h1>Politique de confidentialité</h1>
-<p class="version"><strong>Version 1.6</strong> — En vigueur depuis le 12 septembre 2026.</p>
+<p class="version"><strong>Version 1.7</strong> — En vigueur depuis le 13 septembre 2026.</p>
 
 <h2>1. Introduction</h2>
 <p>La présente politique de confidentialité décrit comment l'application mobile <strong>ATEQO</strong> (« l'Application ») collecte, utilise et protège les données personnelles de ses utilisateurs (« vous »). Elle est rédigée conformément au Règlement (UE) 2016/679 relatif à la protection des données personnelles (« RGPD ») et à la loi française Informatique et Libertés du 6 janvier 1978 modifiée.</p>
@@ -196,6 +196,7 @@
     <tr><td>Position GPS précise</td><td>Uniquement pendant une navigation active (lancée explicitement par vous)</td><td>Centrer la carte, calculer la distance jusqu'au prochain arrêt, détecter l'arrivée (&lt; 80 mètres)</td></tr>
     <tr><td>Adresse IP, type d'appareil et version d'OS</td><td>Lors des appels au serveur backend</td><td>Limitation de débit (anti-abus), logs techniques</td></tr>
     <tr><td>Langue, pays (déduit du réglage de votre appareil), date de création et date de dernière connexion du compte</td><td>À la connexion</td><td>Mémoriser votre langue entre vos appareils ; statistiques internes anonymisées (répartition langue / pays) pour améliorer l'application</td></tr>
+    <tr><td>Empreinte hachée de l'identifiant de votre appareil, et nombre de tournées d'essai consommées sur cet appareil</td><td>À la connexion, sur Android</td><td>Empêcher que les tournées offertes à l'inscription se rouvrent à chaque nouveau compte créé sur le même appareil (cf. point 3.6)</td></tr>
   </tbody>
 </table>
 
@@ -227,12 +228,18 @@
 <p><strong>Aucune adresse, aucune coordonnée GPS, aucun nom de destinataire et aucun contenu de tournée n'est transmis à ce titre.</strong> Les adresses que vous saisissez ne quittent jamais votre appareil par ce canal.</p>
 <p>Le site ateqo.fr, distinct de l'application, mesure sa fréquentation à l'aide de Google Analytics. Cette mesure n'est activée qu'après votre consentement explicite et se retire à tout moment&nbsp;; elle est décrite dans les <a href="/mentions-legales/">mentions légales</a>.</p>
 
+<h3>3.6 Prévention des abus de l'offre d'essai</h3>
+<p>Depuis la version 1.0, l'application lit sur Android l'identifiant que le système attribue à ATEQO sur votre appareil (<code>ANDROID_ID</code>). <strong>Elle n'en transmet jamais la valeur</strong> : elle en calcule une empreinte par hachage SHA-256, et seule cette empreinte est envoyée à notre base de données, accompagnée du nombre de tournées d'essai déjà consommées. À partir de l'empreinte, il n'est pas possible de retrouver l'identifiant d'origine.</p>
+<p>Cette empreinte a une seule finalité : empêcher que les tournées offertes à l'inscription se rouvrent chaque fois qu'un nouveau compte est créé sur le même appareil. Un second compte créé sur cet appareil fonctionne normalement ; il reprend simplement le décompte de l'essai là où il en était.</p>
+<p>Elle ne sert ni à la publicité, ni à la mesure d'audience, ni à vous suivre d'une application à l'autre. Elle n'est transmise à aucun tiers en dehors de notre hébergeur de base de données, et elle est distincte de l'identifiant publicitaire Android, que l'application ne lit pas (cf. point 3.4).</p>
+<p><strong>Base légale</strong> : intérêt légitime de l'éditeur à prévenir l'utilisation abusive de son offre gratuite (article 6.1.f du RGPD). Vous pouvez exercer votre droit d'opposition dans les conditions décrites au point 7.</p>
+
 <h2>4. Destinataires de vos données</h2>
 <p>ATEQO s'appuie sur les sous-traitants techniques suivants. Aucun de ces tiers ne revend vos données. Seule la mesure décrite au point 3.5, soumise à votre consentement, poursuit une finalité publicitaire — et elle se limite à évaluer nos propres campagnes, sans jamais vous adresser de publicité.</p>
 <table>
   <thead><tr><th>Sous-traitant</th><th>Service rendu</th><th>Données transmises</th></tr></thead>
   <tbody>
-    <tr><td><strong>Supabase Inc.</strong> (États-Unis)</td><td>Hébergement de base de données + authentification</td><td>Email, mot de passe haché, pseudonyme, fiche personnelle (heure de prise de service, jours travaillés, volume moyen d'une tournée)</td></tr>
+    <tr><td><strong>Supabase Inc.</strong> (États-Unis)</td><td>Hébergement de base de données + authentification</td><td>Email, mot de passe haché, pseudonyme, fiche personnelle (heure de prise de service, jours travaillés, volume moyen d'une tournée), empreinte hachée de l'appareil et nombre de tournées d'essai consommées sur cet appareil</td></tr>
     <tr><td><strong>Google LLC — Google Sign-In</strong> (États-Unis)</td><td>Authentification alternative à l'email</td><td>Nom et adresse email de votre compte Google, uniquement si vous choisissez cette méthode de connexion</td></tr>
     <tr><td><strong>Google LLC — Google Play Billing</strong> (États-Unis)</td><td>Traitement des paiements et des abonnements premium</td><td>Le paiement est géré par votre compte Google Play — ATEQO ne reçoit aucune donnée bancaire</td></tr>
     <tr><td><strong>RevenueCat, Inc.</strong> (États-Unis)</td><td>Gestion technique des abonnements (validation des achats, statut premium)</td><td>Identifiant de compte (anonyme) et statut d'abonnement — aucune donnée bancaire</td></tr>
@@ -258,6 +265,7 @@
   <thead><tr><th>Type de donnée</th><th>Durée</th></tr></thead>
   <tbody>
     <tr><td>Compte utilisateur (email, mot de passe haché, pseudonyme, langue, pays, dates de connexion)</td><td>Tant que votre compte existe. Suppression possible <strong>directement dans l'application</strong> (onglet Compte → Gestion du compte → Supprimer le compte), sur demande par email, ou après 3 ans d'inactivité totale.</td></tr>
+    <tr><td>Empreinte hachée de l'appareil et compteur de tournées d'essai (cf. point 3.6)</td><td>Le lien entre l'empreinte et votre compte est supprimé avec votre compte. L'empreinte et son compteur, qui ne désignent alors plus aucun compte, sont conservés tant que l'offre d'essai existe, afin qu'elle ne se rouvre pas sur cet appareil.</td></tr>
     <tr><td>Adresses, arrêts, historique de tournées</td><td>Stockés localement sur votre appareil uniquement. Effacés à la désinstallation de l'Application.</td></tr>
     <tr><td>Position GPS</td><td>Conservée en mémoire vive uniquement le temps de la navigation active. Perdue à la fin de la session.</td></tr>
     <tr><td>Logs serveur (IP, headers)</td><td>30 jours maximum côté Vercel, conformément à leur politique d'hébergement standard.</td></tr>
