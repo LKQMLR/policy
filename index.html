@@ -157,7 +157,7 @@
 <a href="/" style="text-decoration:none;"><div class="logo"><span>A</span><span>T</span><span>E</span><span>Q</span><span>O</span></div></a>
 
 <h1>Politique de confidentialité</h1>
-<p class="version"><strong>Version 1.5</strong> — En vigueur depuis le 8 septembre 2026.</p>
+<p class="version"><strong>Version 1.6</strong> — En vigueur depuis le 12 septembre 2026.</p>
 
 <h2>1. Introduction</h2>
 <p>La présente politique de confidentialité décrit comment l'application mobile <strong>ATEQO</strong> (« l'Application ») collecte, utilise et protège les données personnelles de ses utilisateurs (« vous »). Elle est rédigée conformément au Règlement (UE) 2016/679 relatif à la protection des données personnelles (« RGPD ») et à la loi française Informatique et Libertés du 6 janvier 1978 modifiée.</p>
@@ -184,6 +184,8 @@
     <tr><td>Adresses de livraison saisies</td><td>Organisation et optimisation de votre tournée</td><td>Exécution du contrat</td></tr>
     <tr><td>Notes associées à un arrêt (optionnel)</td><td>Aide-mémoire pour vos livraisons</td><td>Exécution du contrat</td></tr>
     <tr><td>Adresse du point de départ (« base »)</td><td>Calcul d'itinéraire depuis votre dépôt ou domicile</td><td>Exécution du contrat</td></tr>
+    <tr><td>Fiche personnelle : heure de prise de service, jours travaillés, nombre moyen d'arrêts par tournée</td><td>Préparer votre briefing du matin, programmer son rappel à la bonne heure et estimer votre gain de temps sur la semaine</td><td>Exécution du contrat</td></tr>
+    <tr><td>Livraisons reportées : adresse, note, date de report ou retour dépôt</td><td>Vous les rappeler le jour venu et vous permettre de les remettre dans une tournée</td><td>Exécution du contrat</td></tr>
   </tbody>
 </table>
 
@@ -230,7 +232,7 @@
 <table>
   <thead><tr><th>Sous-traitant</th><th>Service rendu</th><th>Données transmises</th></tr></thead>
   <tbody>
-    <tr><td><strong>Supabase Inc.</strong> (États-Unis)</td><td>Hébergement de base de données + authentification</td><td>Email, mot de passe haché, pseudonyme</td></tr>
+    <tr><td><strong>Supabase Inc.</strong> (États-Unis)</td><td>Hébergement de base de données + authentification</td><td>Email, mot de passe haché, pseudonyme, fiche personnelle (heure de prise de service, jours travaillés, volume moyen d'une tournée)</td></tr>
     <tr><td><strong>Google LLC — Google Sign-In</strong> (États-Unis)</td><td>Authentification alternative à l'email</td><td>Nom et adresse email de votre compte Google, uniquement si vous choisissez cette méthode de connexion</td></tr>
     <tr><td><strong>Google LLC — Google Play Billing</strong> (États-Unis)</td><td>Traitement des paiements et des abonnements premium</td><td>Le paiement est géré par votre compte Google Play — ATEQO ne reçoit aucune donnée bancaire</td></tr>
     <tr><td><strong>RevenueCat, Inc.</strong> (États-Unis)</td><td>Gestion technique des abonnements (validation des achats, statut premium)</td><td>Identifiant de compte (anonyme) et statut d'abonnement — aucune donnée bancaire</td></tr>
@@ -287,9 +289,12 @@
   <li>la liste de vos arrêts en cours</li>
   <li>votre point de départ favori</li>
   <li>l'historique de vos tournées</li>
-  <li>vos préférences d'affichage (compteur du tutoriel, langue, thème)</li>
+  <li>vos livraisons reportées et vos retours dépôt en attente</li>
+  <li>votre fiche personnelle (heure de prise de service, jours travaillés, volume moyen d'une tournée)</li>
+  <li>vos préférences (langue, thème, son, vibration, briefing du matin)</li>
 </ul>
 <p>Ces données restent <strong>exclusivement sur votre appareil</strong>. Elles ne sont jamais transmises à un serveur. La désinstallation de l'Application les efface définitivement.</p>
+<p>Les rappels du briefing du matin sont <strong>programmés localement par votre appareil</strong>, à partir de l'heure que vous avez indiquée. ATEQO ne vous envoie aucune notification depuis ses serveurs et ne conserve donc aucun jeton de notification.</p>
 <p>ATEQO n'utilise <strong>aucun cookie publicitaire</strong> et ne vous adresse aucune publicité. Le seul identifiant transmis à un tiers est celui de la mesure décrite au point 3.5, soumise à votre consentement et révocable à tout moment.</p>
 
 <h2>9. Sécurité</h2>

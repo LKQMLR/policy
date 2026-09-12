@@ -157,7 +157,7 @@
 <a href="/" style="text-decoration:none;"><div class="logo"><span>A</span><span>T</span><span>E</span><span>Q</span><span>O</span></div></a>
 
 <h1>Privacy Policy</h1>
-<p class="version"><strong>Version 1.5</strong> — In effect since 8 September 2026.</p>
+<p class="version"><strong>Version 1.6</strong> — In effect since 12 September 2026.</p>
 
 <h2>1. Introduction</h2>
 <p>This privacy policy describes how the <strong>ATEQO</strong> mobile application (“the App”) collects, uses and protects the personal data of its users (“you”). It is drafted in accordance with Regulation (EU) 2016/679 on the protection of personal data (“GDPR”) and the French Data Protection Act (<em>loi Informatique et Libertés</em>) of 6 January 1978, as amended.</p>
@@ -184,6 +184,8 @@
     <tr><td>Delivery addresses you enter</td><td>Organising and optimising your route</td><td>Performance of a contract</td></tr>
     <tr><td>Notes attached to a stop (optional)</td><td>Reminder for your deliveries</td><td>Performance of a contract</td></tr>
     <tr><td>Starting point (“base”) address</td><td>Calculating the route from your depot or home</td><td>Performance of a contract</td></tr>
+    <tr><td>Personal profile: start-of-shift time, working days, average number of stops per route</td><td>Preparing your morning briefing, scheduling its reminder at the right time, and estimating your time saved across the week</td><td>Performance of a contract</td></tr>
+    <tr><td>Rescheduled deliveries: address, note, new date or return-to-depot status</td><td>Reminding you on the day and letting you put them back into a route</td><td>Performance of a contract</td></tr>
   </tbody>
 </table>
 
@@ -230,7 +232,7 @@
 <table>
   <thead><tr><th>Sub-processor</th><th>Service provided</th><th>Data transmitted</th></tr></thead>
   <tbody>
-    <tr><td><strong>Supabase Inc.</strong> (United States)</td><td>Database hosting + authentication</td><td>Email, hashed password, username</td></tr>
+    <tr><td><strong>Supabase Inc.</strong> (United States)</td><td>Database hosting + authentication</td><td>Email, hashed password, username, personal profile (start-of-shift time, working days, average route size)</td></tr>
     <tr><td><strong>Google LLC — Google Sign-In</strong> (United States)</td><td>Alternative authentication to email</td><td>Name and email address of your Google account, only if you choose this sign-in method</td></tr>
     <tr><td><strong>Google LLC — Google Play Billing</strong> (United States)</td><td>Processing of premium payments and subscriptions</td><td>Payment is handled by your Google Play account — ATEQO receives no banking data</td></tr>
     <tr><td><strong>RevenueCat, Inc.</strong> (United States)</td><td>Technical subscription management (purchase validation, premium status)</td><td>Account identifier (anonymous) and subscription status — no banking data</td></tr>
@@ -287,9 +289,12 @@
   <li>the list of your current stops</li>
   <li>your favourite starting point</li>
   <li>your route history</li>
-  <li>your display preferences (tutorial counter, language, theme)</li>
+  <li>your rescheduled deliveries and pending returns to depot</li>
+  <li>your personal profile (start-of-shift time, working days, average route size)</li>
+  <li>your preferences (language, theme, sound, vibration, morning briefing)</li>
 </ul>
 <p>This data remains <strong>exclusively on your device</strong>. It is never transmitted to a server. Uninstalling the App erases it permanently.</p>
+<p>Morning briefing reminders are <strong>scheduled locally by your device</strong>, from the time you provided. ATEQO never sends you a notification from its servers and therefore stores no notification token.</p>
 <p>ATEQO uses <strong>no advertising cookies</strong> and never sends you advertising. The only identifier shared with a third party is the one used for the measurement described in section 3.5, which is subject to your consent and revocable at any time.</p>
 
 <h2>9. Security</h2>
