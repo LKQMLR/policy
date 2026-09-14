@@ -157,7 +157,7 @@
 <a href="/" style="text-decoration:none;"><div class="logo"><span>A</span><span>T</span><span>E</span><span>Q</span><span>O</span></div></a>
 
 <h1>Privacy Policy</h1>
-<p class="version"><strong>Version 1.7</strong> — In effect since 13 September 2026.</p>
+<p class="version"><strong>Version 1.8</strong> — In effect since 14 September 2026.</p>
 
 <h2>1. Introduction</h2>
 <p>This privacy policy describes how the <strong>ATEQO</strong> mobile application (“the App”) collects, uses and protects the personal data of its users (“you”). It is drafted in accordance with Regulation (EU) 2016/679 on the protection of personal data (“GDPR”) and the French Data Protection Act (<em>loi Informatique et Libertés</em>) of 6 January 1978, as amended.</p>
@@ -197,6 +197,7 @@
     <tr><td>IP address, device type and OS version</td><td>When calls are made to the backend server</td><td>Rate limiting (anti-abuse), technical logs</td></tr>
     <tr><td>Language, country (inferred from your device settings), account creation date and last sign-in date</td><td>At sign-in</td><td>Remembering your language across your devices; anonymised internal statistics (language / country breakdown) to improve the App</td></tr>
     <tr><td>Hashed fingerprint of your device identifier, and the number of trial routes used on that device</td><td>At sign-in, on Android</td><td>Preventing the routes offered at signup from reopening each time a new account is created on the same device (see section 3.6)</td></tr>
+    <tr><td>Technical error reports from the App: error name and message, a short call stack excerpt, the screen or function involved, App version, platform, time. Cleaned on the device before sending: no email address, no delivery address, no coordinates, no token. Linked to your account if you are signed in</td><td>When an error occurs in the App</td><td>Detecting and fixing malfunctions (legitimate interest)</td></tr>
   </tbody>
 </table>
 
@@ -239,7 +240,7 @@
 <table>
   <thead><tr><th>Sub-processor</th><th>Service provided</th><th>Data transmitted</th></tr></thead>
   <tbody>
-    <tr><td><strong>Supabase Inc.</strong> (United States)</td><td>Database hosting + authentication</td><td>Email, hashed password, username, personal profile (start-of-shift time, working days, average route size), hashed device fingerprint and the number of trial routes used on that device</td></tr>
+    <tr><td><strong>Supabase Inc.</strong> (United States)</td><td>Database hosting + authentication</td><td>Email, hashed password, username, personal profile (start-of-shift time, working days, average route size), hashed device fingerprint and the number of trial routes used on that device, technical error reports from the App (see section 3.2)</td></tr>
     <tr><td><strong>Google LLC — Google Sign-In</strong> (United States)</td><td>Alternative authentication to email</td><td>Name and email address of your Google account, only if you choose this sign-in method</td></tr>
     <tr><td><strong>Google LLC — Google Play Billing</strong> (United States)</td><td>Processing of premium payments and subscriptions</td><td>Payment is handled by your Google Play account — ATEQO receives no banking data</td></tr>
     <tr><td><strong>RevenueCat, Inc.</strong> (United States)</td><td>Technical subscription management (purchase validation, premium status)</td><td>Account identifier (anonymous) and subscription status — no banking data</td></tr>
@@ -266,6 +267,7 @@
   <tbody>
     <tr><td>User account (email, hashed password, username, language, country, sign-in dates)</td><td>For as long as your account exists. Deletion is possible <strong>directly within the App</strong> (Account tab → Account management → Delete account), on request by email, or after 3 years of total inactivity.</td></tr>
     <tr><td>Hashed device fingerprint and trial route counter (see section 3.6)</td><td>The link between the fingerprint and your account is deleted along with your account. The fingerprint and its counter, which then no longer point to any account, are kept for as long as the trial offer exists, so that it does not reopen on that device.</td></tr>
+    <tr><td>Technical error reports (see section 3.2)</td><td>90 days, then deleted automatically. Deleted along with your account if linked to it.</td></tr>
     <tr><td>Addresses, stops, route history</td><td>Stored locally on your device only. Erased when the App is uninstalled.</td></tr>
     <tr><td>GPS location</td><td>Held in RAM only for the duration of active navigation. Lost at the end of the session.</td></tr>
     <tr><td>Server logs (IP, headers)</td><td>30 days maximum on Vercel's side, in accordance with their standard hosting policy.</td></tr>
